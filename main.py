@@ -1,12 +1,13 @@
-import math
 
-BASE_VALUE = 2
-exponent_value = int(input("Enter the exponent value : "))
 
-print("Number : ", exponent_value)
+number = int(input("Enter the Harmonic Number : "))
+number_range = range(number)
+harmonic_number = 0
 
-if (exponent_value >= 0) and (exponent_value < 31):
-        result = (math.pow(exponent_value, BASE_VALUE))
-        print("Power 2 for exponent ", exponent_value, " is : ", result)
+if number == 0:
+        print("Enter the valid Harmonic Number..!")
 else:
-        print("Enter Exponent value in between 0 to 30")
+        for i in number_range:
+                i += 1
+                harmonic_number += (1/i)
+        print("Harmonic number for ", number, " is : ", round(harmonic_number, 2), type(harmonic_number))
