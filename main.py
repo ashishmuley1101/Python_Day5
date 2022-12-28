@@ -1,13 +1,12 @@
+import math
 
-year = int(input("Enter Year : "))
+BASE_VALUE = 2
+exponent_value = int(input("Enter the exponent value : "))
 
-print("Year : ", year)
+print("Number : ", exponent_value)
 
-if year == 0:
-        print("Enter the valid year..!")
-
-elif (((year % 4 == 0) and (year % 100 != 0)) or (year % 400 == 0)):
-        print("Specified year is a leap year.")
-
+if (exponent_value >= 0) and (exponent_value < 31):
+        result = (math.pow(exponent_value, BASE_VALUE))
+        print("Power 2 for exponent ", exponent_value, " is : ", result)
 else:
-        print("Specified year is not a leap year.")
+        print("Enter Exponent value in between 0 to 30")
