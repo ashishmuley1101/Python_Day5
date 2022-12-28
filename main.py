@@ -1,16 +1,22 @@
-# This is a sample Python script.
+import random
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+flip_coin = int(input("How many times you want to flip the coin : "))
+flip_coin_range = range(flip_coin)
+head = 0
+tail = 0
 
+print("Coin flipping : ",flip_coin,"times")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+for coin in flip_coin_range:
 
+    if random.randint(0, 1) == 1:
+        head += 1
+    else:
+        tail += 1
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+percent_head = ((head/flip_coin) * 100)
+percent_tail = ((tail / flip_coin) * 100)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print("Head Percentage : ", percent_head, "%")
+print("Tail Percentage : ", percent_tail, "%")
+
