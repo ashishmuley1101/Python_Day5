@@ -1,22 +1,13 @@
-import random
 
-flip_coin = int(input("How many times you want to flip the coin : "))
-flip_coin_range = range(flip_coin)
-head = 0
-tail = 0
+year = int(input("Enter Year : "))
 
-print("Coin flipping : ",flip_coin,"times")
+print("Year : ", year)
 
-for coin in flip_coin_range:
+if year == 0:
+        print("Enter the valid year..!")
 
-    if random.randint(0, 1) == 1:
-        head += 1
-    else:
-        tail += 1
+elif (((year % 4 == 0) and (year % 100 != 0)) or (year % 400 == 0)):
+        print("Specified year is a leap year.")
 
-percent_head = ((head/flip_coin) * 100)
-percent_tail = ((tail / flip_coin) * 100)
-
-print("Head Percentage : ", percent_head, "%")
-print("Tail Percentage : ", percent_tail, "%")
-
+else:
+        print("Specified year is not a leap year.")
