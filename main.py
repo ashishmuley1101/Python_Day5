@@ -1,11 +1,9 @@
 
-number = int(input("Enter a number the Prime Number : "))
-number_range = range(number)
+divident = int(input("Enter the value for Dividend : "))
+divisor = int(input("Enter the value for Divisor : "))
 
-for i in number_range:
-        i += 2
-        while number % i == 0:
-                        print(i, " ")
-                        number /= i
-if number > 2:
-    print(number)
+quotient = divident / divisor
+remainder = divident % divisor
+
+print("Quotient for your given valve : ", quotient)
+print("Reaminder for your given valve : ", remainder)
