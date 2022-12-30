@@ -1,9 +1,12 @@
 
-divident = int(input("Enter the value for Dividend : "))
-divisor = int(input("Enter the value for Divisor : "))
+first_num = int(input("Enter the First Number : "))
+second_num = int(input("Enter the Second Number : "))
 
-quotient = divident / divisor
-remainder = divident % divisor
+print("Before swapping Numbers are : ", first_num,"  ", second_num)
 
-print("Quotient for your given valve : ", quotient)
-print("Reaminder for your given valve : ", remainder)
+swap_num = first_num
+first_num = second_num
+second_num = swap_num
+
+print("After swapping Numbers are : ", first_num,"  ", second_num)
+
