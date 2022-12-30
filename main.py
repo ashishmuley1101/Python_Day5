@@ -1,10 +1,21 @@
 
-number = int(input("Enter any Number : "))
+char = input("Enter the Alphabet : ")
 
-if number % 2 == 0:
-    print(number, "is even number.")
+if char == 'a':
+    print(char + " is vowel.")
+elif char == 'e':
+    print(char + " is vowel.")
+elif char == 'i':
+    print(char + " is vowel.")
+elif char == 'o':
+    print(char + " is vowel.")
+elif char == 'u':
+    print(char + " is vowel.")
 else:
-    print(number, " is odd number.")
+    print(char + " is consonant.")
+
+
+
 
 
 
