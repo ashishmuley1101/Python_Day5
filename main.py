@@ -1,5 +1,4 @@
 
-
 divident = int(input("Enter the value for Dividend : "))
 divisor = int(input("Enter the value for Divisor : "))
 
