@@ -1,14 +1,20 @@
 
-# Calculating distance between two points from the origin.
+# Calculating Quadratic Equation using I/P value a, b and c
 import math
 
-point_x = int(input(" Enter the point x : "))
-point_y = int(input(" Enter the point y : "))
+a = int(input(" Enter a : "))
+b = int(input(" Enter b : "))
+c = int(input(" Enter b : "))
 
-def distance_cal(x, y):
-    result = math.sqrt(x*x + y*y)
-    return result
+def root(a, b, c):
 
-distance = distance_cal(point_x, point_y)
+    delta = (b * b - 4 * a * c);
+    x1 = (-b + math.sqrt(delta)) / (2 * a);
+    x2 = (-b - math.sqrt(delta)) / (2 * a);
 
-print("Distance for the origin is  : ", round(distance, 2))
+    print("Root of x1 : ", round(x1,2))
+    print("Root of x2 : ", round(x2,2))
+
+root(a, b, c)
+
+
