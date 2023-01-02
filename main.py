@@ -1,16 +1,17 @@
+import array as arr
 
-num1 = int(input("Enter the first number : "))
-num2 = int(input("Enter the second numbers : "))
-num3 = int(input("Enter the third numbers : "))
+# creating an array with integer type
+a = arr.array('i', [1, 2, -3, 8, -5, 4 ])
 
-if num1 > num2 and num1 > num3:
-    print("The largest number is : ",num1)
-elif num2 > num1 and num2 > num3:
-    print("The largest number is : ", num2)
-elif num3 > num1 and num3 > num2:
-    print("The largest number is : ", num3)
-else:
-    print("The numbers are same.")
+for i in range(0, 6):
+    first_num = a[i]
+    for j in range(i+1, 6):
+        second_num = a[j]
+        for k in range(j+1, 6):
+            third_num = a[k]
+            result = first_num + second_num + third_num
+            if result == 0:
+                print(first_num, second_num, third_num, "= 0")
 
 
 
