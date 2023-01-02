@@ -1,20 +1,16 @@
 
-# Calculating Quadratic Equation using I/P value a, b and c
+# Calculating the wind chill using formula
 import math
 
-a = int(input(" Enter a : "))
-b = int(input(" Enter b : "))
-c = int(input(" Enter b : "))
+temp = float(input(" Enter temperature in Fahrenheit : "))
+wind_speed = int(input("Enter wind speed in miles per hour : "))
 
-def root(a, b, c):
+def wind_chill(f, ws):
 
-    delta = (b * b - 4 * a * c);
-    x1 = (-b + math.sqrt(delta)) / (2 * a);
-    x2 = (-b - math.sqrt(delta)) / (2 * a);
+    w = 35.74 + 0.62158 * f + (0.4275 * f - 35.75) * math.pow(ws, 0.16)
+    print("National Weather Service defines the effective temperature : ", w)
 
-    print("Root of x1 : ", round(x1,2))
-    print("Root of x2 : ", round(x2,2))
-
-root(a, b, c)
-
-
+if ( abs(temp)> 50 or wind_speed > 120 or wind_speed < 3):
+    print("Enter correct input")
+else:
+    wind_chill(temp, wind_speed)
