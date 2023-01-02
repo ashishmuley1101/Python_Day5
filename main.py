@@ -1,16 +1,22 @@
 
-# Calculating the wind chill using formula
-import math
+# creating 2 Dimensional Array by user input values
+import numpy as np
 
-temp = float(input(" Enter temperature in Fahrenheit : "))
-wind_speed = int(input("Enter wind speed in miles per hour : "))
+matrix = []
 
-def wind_chill(f, ws):
+row = int(input("Enter numbers of rows : "))
+column = int(input("Enter numbers of columns : "))
 
-    w = 35.74 + 0.62158 * f + (0.4275 * f - 35.75) * math.pow(ws, 0.16)
-    print("National Weather Service defines the effective temperature : ", w)
+for i in range(row):
+    a = []
+    for j in range(column):
+        val = int(input("Enter the value : "))
+        a.append(val)
+    matrix.append(a)
+arr = np.array(matrix)
+for i in range(row):
+    for j in range(column):
+        print("\t", arr[i][j], end=" ")
+    print()
+print(type(arr))
 
-if ( abs(temp)> 50 or wind_speed > 120 or wind_speed < 3):
-    print("Enter correct input")
-else:
-    wind_chill(temp, wind_speed)
